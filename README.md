@@ -1,5 +1,4 @@
-# Welcome to StackEdit!
-
+# WinSCP URL Sample
 This project goal is to help some of my classmates to understand how it works the WinSCP URL. 
 You can check this application online by clicking [here](https://babiperina.github.io/winscp-url-sample/).
 
