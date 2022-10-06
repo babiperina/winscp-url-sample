@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WinSCP</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        let baseurl = "https://mylinux.langara.bc.ca/~yourstudentID"
+        let adminpages = baseurl + "/admin-pages";
+        let dashboard = adminpages + "/dashboard.html";
+        let settings = adminpages + "/settings.html";
+        let publicpages = baseurl + "/public-pages";
+        let about = publicpages + "/about.html";
+        let login = publicpages + "/login.html";
+        let products = publicpages + "/products";
+        let product1 = products + "/product1.html";
+        let product2 = products + "/product2.html";
+        let imagesfolder = baseurl + "/images";
+        let profile = imagesfolder + "/profile.jpg";
+        let styles = baseurl + "/styles";
+        let style = styles + "/style.css";
+        let scriptsfolder = baseurl + "/scripts";
+        let scriptcss = scriptsfolder + "/script.js";
+    </script>
+    <script defer>
+        function insertUrl(url) {
+            document.getElementById("url").innerText = url;
+        }
+    </script>
+</head>
+<body>
+    <h1>Typing a URL based in WinSCP</h1>
+    <div id="container">
+        <div id="tree">
+            <ul id="whole-tree">
+                <li>
+                    <div class="tree-item" onclick="insertUrl(baseurl)">
+                        <img src="images/folder-icon.png" alt="" width="18">
+                        <p>public_html</p>
+                    </div>
+                    <ul>
+                        <li>
+                            <div class="tree-item" onclick="insertUrl(adminpages)">
+                                <img src="images/folder-icon.png" alt="" width="18">
+                                <p>admin-pages</p>
+                            </div>
+                            <ul>
+                                <li>
+                                    <div class="tree-item" onclick="insertUrl(dashboard)">
+                                        <img src="images/file-icon.png" alt="" width="18">
+                                        <p>dashboard.html</p>
+                                    </div>
+                                    <div class="tree-item" onclick="insertUrl(settings)">
+                                        <img src="images/file-icon.png" alt="" width="18">
+                                        <p>settings.html</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="tree-item" onclick="insertUrl(publicpages)">
+                                <img src="images/folder-icon.png" alt="" width="18">
+                                <p>public-pages</p>
+                            </div>
+                            <ul>
+                                <li>
+                                    <div class="tree-item" onclick="insertUrl(about)">
+                                        <img src="images/file-icon.png" alt="" width="18">
+                                        <p>about.html</p>
+                                    </div>
+                                    <div class="tree-item" onclick="insertUrl(login)">
+                                        <img src="images/file-icon.png" alt="" width="18">
+                                        <p>login.html</p>
+                                    </div>
+                                    <div class="tree-item"  onclick="insertUrl(products)">
+                                        <img src="images/folder-icon.png" alt="" width="18">
+                                        <p>products</p>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <div class="tree-item" onclick="insertUrl(product1)">
+                                                <img src="images/file-icon.png" alt="" width="18">
+                                                <p>product1.html</p>
+                                            </div>
+                                            <div class="tree-item" onclick="insertUrl(product2)">
+                                                <img src="images/file-icon.png" alt="" width="18">
+                                                <p>product2.html</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="tree-item" onclick="insertUrl(imagesfolder)">
+                                <img src="images/folder-icon.png" alt="" width="18">
+                                <p>images</p>
+                            </div>
+                            <ul>
+                                <li>
+                                    <div class="tree-item" onclick="insertUrl(profile)">
+                                        <img src="images/file-icon.png" alt="" width="18">
+                                        <p>profile.jpg</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="tree-item" onclick="insertUrl(styles)">
+                                <img src="images/folder-icon.png" alt="" width="18">
+                                <p>styles</p>
+                            </div>
+                            <ul>
+                                <li>
+                                    <div class="tree-item" onclick="insertUrl(style)">
+                                        <img src="images/file-icon.png" alt="" width="18">
+                                        <p>style.css</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="tree-item" onclick="insertUrl(scriptsfolder)">
+                                <img src="images/folder-icon.png" alt="" width="18">
+                                <p>scripts</p>
+                            </div>
+                            <ul>
+                                <li>
+                                    <div class="tree-item" onclick="insertUrl(scriptcss)">
+                                        <img src="images/file-icon.png" alt="" width="18">
+                                        <p>script.js</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div id="display">
+            <div id="url"></div>
+        </div>
+    </div>
+    <div>
+        <p>- You can considerer public_html folder always the base url, which is <strong>https://mylinux.langara.bc.ca/~yourstudentID</strong></p>
+        <p>- When you get into a folder, considerer add to your base url the follow string: <strong>"/yourfoldername"</strong></p>
+        <p>- The file that you're trying to access, will be always the last part of your URL. <br>Example: <strong>https://mylinux.langara.bc.ca/~yourstudentID/admin-pages/dashboard.html</strong></p>
+    </div>
+</body>
+</html>
